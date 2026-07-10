@@ -1,0 +1,2 @@
+# unity-substance-runtime-lab
+unityランタイムでsubstanceのパラメータを操作する実験リポジトリ
