@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="MainUI.uss" />
+
+    <ui:VisualElement name="root" class="root">
+
+        <!-- 左上：タイトル -->
+        <ui:Label text="Substance Runtime Lab" name="title-label" class="title" />
+
+        <!-- 右側：操作ブロックを縦に積み重ねるパネル -->
+        <ui:VisualElement name="control-panel" class="control-panel">
+
+            <ui:VisualElement class="control-block">
+                <ui:Label text="Wear Level" class="control-label" />
+                <ui:Slider low-value="0" high-value="1" value="0.3" name="slider-wear" class="control-slider" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="control-block">
+                <ui:Label text="Rust Amount" class="control-label" />
+                <ui:Slider low-value="0" high-value="1" value="0.5" name="slider-rust" class="control-slider" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="control-block">
+                <ui:Label text="Stripe Count (X Amount)" class="control-label" />
+                <ui:SliderInt low-value="1" high-value="10" value="4" name="slider-stripe" class="control-slider" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="control-block">
+                <ui:Label text="Paint Color" class="control-label" />
+                <ui:Slider low-value="0" high-value="1" value="1" name="slider-color-r" class="control-slider" />
+                <ui:Slider low-value="0" high-value="1" value="1" name="slider-color-g" class="control-slider" />
+                <ui:Slider low-value="0" high-value="1" value="1" name="slider-color-b" class="control-slider" />
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>
