@@ -2,20 +2,26 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Adobe.Substance.Runtime;
 using Adobe.Substance;
+using UnityEngine.UIElements;
+using R3;
+using System;
 
 public class SubstanceMaterialControler : MonoBehaviour
 {
     [SerializeField] private SubstanceRuntimeGraph substanceGraph;
     [SerializeField] private SubstanceGraphSO substanceGraphAsset;
+    [SerializeField] private UIDocument uiDocument;
     [SerializeField] private string inputName = "x_amount"; // Substance Designer側のIdentifier
     [SerializeField] private int step = 1;
     [SerializeField] private int minValue = 1;
     [SerializeField] private int maxValue = 10;
 
-    void Start()
-    {
-        LogAllInputNames();
-    }
+    private readonly Subject<int> stripeChanged = new();
+    private readonly CompositeDisposable disposables = new();
+
+
+    private SliderInt stripeSlider;
+
 
     void LogAllInputNames()
     {
@@ -31,24 +37,42 @@ public class SubstanceMaterialControler : MonoBehaviour
         }
     }
 
-    void Update()
+    void Start()
     {
-        if (substanceGraph == null) return;
-        if (Keyboard.current == null) return; // キーボード未接続時のガード
+        LogAllInputNames();
+    }
 
-        int delta = 0;
-        if (Keyboard.current.upArrowKey.wasPressedThisFrame) delta = step;
-        if (Keyboard.current.downArrowKey.wasPressedThisFrame) delta = -step;
+    void OnEnable()
+    {
+        var root = uiDocument.rootVisualElement;
+        stripeSlider = root.Q<SliderInt>("slider-stripe");
+        stripeSlider.RegisterValueChangedCallback(OnStripeChanged);
 
-        if (delta != 0f)
-        {
-            int current = substanceGraph.GetInputInt(inputName);
-            int next = current + delta;
+        stripeChanged
+            .ThrottleLast(TimeSpan.FromMilliseconds(100)) // 100ms間隔に間引く
+            .Subscribe(value =>
+            {
+                substanceGraph.SetInputInt("x_amount", value);
+                substanceGraph.RenderAsync();
+                Debug.Log($"x_amount updated: {value}");
+            })
+            .AddTo(disposables);
+    }
 
-            substanceGraph.SetInputInt(inputName, next);
-            substanceGraph.RenderAsync();
+    void OnDisable()
+    {
+        stripeSlider.UnregisterValueChangedCallback(OnStripeChanged);
+        disposables.Clear();
+    }
 
-            Debug.Log($"{inputName}: {next:F2}");
-        }
+    void OnDestroy()
+    {
+        disposables.Dispose();
+        stripeChanged.Dispose();
+    }
+
+    void OnStripeChanged(ChangeEvent<int> evt)
+    {
+        stripeChanged.OnNext(evt.newValue);
     }
 }
