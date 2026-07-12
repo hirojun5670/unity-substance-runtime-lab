@@ -119,6 +119,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17212401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17212403}
+  - component: {fileID: 17212402}
+  m_Layer: 0
+  m_Name: SubstanceLifetimeScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &17212402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17212401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1609a98544b2535488e0bca24891147b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubstanceLifetimeScope
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+--- !u!4 &17212403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17212401}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,8 +492,8 @@ GameObject:
   - component: {fileID: 1358872736}
   - component: {fileID: 1358872735}
   - component: {fileID: 1358872734}
-  - component: {fileID: 1358872738}
   - component: {fileID: 1358872739}
+  - component: {fileID: 1358872740}
   m_Layer: 0
   m_Name: SubstanceCube
   m_TagString: Untagged
@@ -546,25 +594,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1358872738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358872733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4181fbe0ec39ef40bef51235d0c599e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  substanceGraph: {fileID: 1358872739}
-  substanceGraphAsset: {fileID: 11400000, guid: 87138eb7bbccd1e46b9101a185a31236, type: 2}
-  uiDocument: {fileID: 1877450657}
-  inputName: x_amount
-  step: 1
-  minValue: 1
-  maxValue: 10
 --- !u!114 &1358872739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +607,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Adobe.Substance.Runtime::Adobe.Substance.Runtime.SubstanceRuntimeGraph
   GraphSO: {fileID: 11400000, guid: 87138eb7bbccd1e46b9101a185a31236, type: 2}
+--- !u!114 &1358872740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358872733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4181fbe0ec39ef40bef51235d0c599e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubstanceMaterialControler
+  substanceGraph: {fileID: 1358872739}
+  substanceGraphAsset: {fileID: 0}
+  inputName: x_amount
 --- !u!1 &1877450655
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877450656}
   - component: {fileID: 1877450657}
+  - component: {fileID: 1877450658}
   m_Layer: 0
   m_Name: UIDocuments
   m_TagString: Untagged
@@ -633,6 +678,19 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &1877450658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877450655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44fed237c3952684c8ba92dbbd189a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubstanceUIDocument
+  uIDocument: {fileID: 1877450657}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -642,3 +700,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1358872737}
   - {fileID: 1877450656}
+  - {fileID: 17212403}
