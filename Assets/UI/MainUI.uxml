@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="MainUI.uss" />
 
-    <ui:VisualElement name="root" class="root">
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
 
         <!-- 左上：タイトル -->
         <ui:Label text="Substance Runtime Lab" name="title-label" class="title" />
