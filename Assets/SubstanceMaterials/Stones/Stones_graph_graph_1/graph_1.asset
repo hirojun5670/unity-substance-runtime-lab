@@ -1,0 +1,438 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed5864476f84ce4b85454db09ca4eaa, type: 3}
+  m_Name: graph_1
+  m_EditorClassIdentifier: Adobe.Substance::Adobe.Substance.SubstanceGraphSO
+  AssetPath: Assets/SubstanceMaterials/Stones/Stones_graph.sbsar
+  RawData: {fileID: -244192453324840774, guid: 20c54a37e8d91ea4883204f08ede76e2, type: 3}
+  Name: graph_1
+  IsRoot: 1
+  FlagedForDelete: 0
+  GUID: e1202b26-a5f1-4d44-84ed-6d1041b2864e
+  Index: 1
+  Input:
+  - rid: 8754088699014676582
+  - rid: 8754088699014676583
+  - rid: 8754088699014676584
+  - rid: 8754088699014676585
+  - rid: 8754088699014676586
+  - rid: 8754088699014676587
+  - rid: 8754088699014676588
+  - rid: 8754088699014676589
+  - rid: 8754088699014676590
+  - rid: 8754088699014676591
+  - rid: 8754088699014676592
+  - rid: 8754088699014676593
+  - rid: 8754088699014676594
+  - rid: 8754088699014676595
+  - rid: 8754088699014676596
+  - rid: 8754088699014676597
+  - rid: 8754088699014676598
+  Output:
+  - Index: 0
+    VirtualOutputIndex: 1
+    Description:
+      Identifier: output
+      Label: output
+      Index: 0
+      Type: 8
+      Channel: unkown
+    OutputTexture: {fileID: 0}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: 
+  HasPhysicalSize: 0
+  PhysicalSize: {x: 0, y: 0, z: 0}
+  EnablePhysicalSize: 0
+  Thumbnail: 
+  CurrentStatePreset: 
+  IsRuntimeOnly: 0
+  GenerateAllOutputs: 0
+  GenerateAllMipmaps: 1
+  OutputMaterial: {fileID: 2100000, guid: 28cd0abad4bab1a44af5db59085c9e44, type: 2}
+  DefaultPreset: " <sbspreset pkgurl=\"pkg://stone\" label=\"\" >\n  <presetinput
+    identifier=\"$outputsize\" uid=\"3128363552\" type=\"8\" value=\"10,10\" />\n
+    </sbspreset>\n"
+  MaterialShader: Universal Render Pipeline/Lit
+  RenderTextures: 0
+  OutputRemaped: 0
+  Presets: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8754088699014676582
+      type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 0
+        Description:
+          Identifier: $outputsize
+          Label: $outputsize
+          GuiGroup: 
+          GuiDescription: 
+          Type: 5
+          WidgetType: 0
+        Data: {x: 10, y: 10}
+        NumericalDescription:
+          DefaultValue: {x: 8, y: 8}
+          MinValue: {x: 0, y: 0}
+          MaxValue: {x: 1, y: 1}
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676583
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 1
+        Description:
+          Identifier: $randomseed
+          Label: $randomseed
+          GuiGroup: 
+          GuiDescription: 
+          Type: 4
+          WidgetType: 0
+        Data: 0
+        NumericalDescription:
+          DefaultValue: 0
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676584
+      type: {class: SubstanceInputFloat2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 2
+        Description:
+          Identifier: cube_a_orientation_offset
+          Label: Orientation offset
+          GuiGroup: CubeA
+          GuiDescription: 
+          Type: 1
+          WidgetType: 8
+        Data: {x: 0.377, y: 0.188}
+        NumericalDescription:
+          DefaultValue: {x: 0.377, y: 0.188}
+          MinValue: {x: 0, y: 0}
+          MaxValue: {x: 0, y: 0}
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676585
+      type: {class: SubstanceInputFloat3, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 3
+        Description:
+          Identifier: cube_a_size
+          Label: Size
+          GuiGroup: CubeA
+          GuiDescription: 
+          Type: 2
+          WidgetType: 1
+        Data: {x: 1, y: 1, z: 1}
+        NumericalDescription:
+          DefaultValue: {x: 1, y: 1, z: 1}
+          MinValue: {x: 0, y: 0, z: 0}
+          MaxValue: {x: 1, y: 1, z: 1}
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676586
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 4
+        Description:
+          Identifier: cube_a_scale
+          Label: Scale
+          GuiGroup: CubeA
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.25
+        NumericalDescription:
+          DefaultValue: 0.25
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676587
+      type: {class: SubstanceInputFloat2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 5
+        Description:
+          Identifier: cube_b_orientation_offset
+          Label: Orientation offset
+          GuiGroup: CubeB
+          GuiDescription: 
+          Type: 1
+          WidgetType: 8
+        Data: {x: 0.186, y: 0.195}
+        NumericalDescription:
+          DefaultValue: {x: 0.186, y: 0.195}
+          MinValue: {x: 0, y: 0}
+          MaxValue: {x: 0, y: 0}
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676588
+      type: {class: SubstanceInputFloat3, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 6
+        Description:
+          Identifier: cube_b_size
+          Label: Size
+          GuiGroup: CubeB
+          GuiDescription: 
+          Type: 2
+          WidgetType: 1
+        Data: {x: 1, y: 1, z: 1}
+        NumericalDescription:
+          DefaultValue: {x: 1, y: 1, z: 1}
+          MinValue: {x: 0, y: 0, z: 0}
+          MaxValue: {x: 1, y: 1, z: 1}
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676589
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 7
+        Description:
+          Identifier: cube_b_scale
+          Label: Scale
+          GuiGroup: CubeB
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.25
+        NumericalDescription:
+          DefaultValue: 0.25
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676590
+      type: {class: SubstanceInputFloat2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 8
+        Description:
+          Identifier: cube_c_orientation_offset
+          Label: Orientation offset
+          GuiGroup: CubeC
+          GuiDescription: 
+          Type: 1
+          WidgetType: 8
+        Data: {x: 0.731, y: 0.652}
+        NumericalDescription:
+          DefaultValue: {x: 0.731, y: 0.652}
+          MinValue: {x: 0, y: 0}
+          MaxValue: {x: 0, y: 0}
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676591
+      type: {class: SubstanceInputFloat3, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 9
+        Description:
+          Identifier: cube_c_size
+          Label: Size
+          GuiGroup: CubeC
+          GuiDescription: 
+          Type: 2
+          WidgetType: 1
+        Data: {x: 1, y: 1, z: 1}
+        NumericalDescription:
+          DefaultValue: {x: 1, y: 1, z: 1}
+          MinValue: {x: 0, y: 0, z: 0}
+          MaxValue: {x: 1, y: 1, z: 1}
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676592
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 10
+        Description:
+          Identifier: cube_c_scale
+          Label: Scale
+          GuiGroup: CubeC
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.25
+        NumericalDescription:
+          DefaultValue: 0.25
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676593
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 11
+        Description:
+          Identifier: stone_mode
+          Label: Input selection
+          GuiGroup: StoneMode
+          GuiDescription: 
+          Type: 4
+          WidgetType: 6
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 2
+          EnumValues:
+          - Value: 1
+            Label: Angular Stone
+          - Value: 2
+            Label: Round Stone
+    - rid: 8754088699014676594
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 12
+        Description:
+          Identifier: tilt_rotation
+          Label: tilt_rotation
+          GuiGroup: Tilt
+          GuiDescription: 
+          Type: 4
+          WidgetType: 6
+        Data: 0
+        NumericalDescription:
+          DefaultValue: 0
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 4
+          EnumValues:
+          - Value: 0
+            Label: "0\xB0"
+          - Value: 1
+            Label: "90\xB0"
+          - Value: 2
+            Label: "180\xB0"
+          - Value: 3
+            Label: "270\xB0"
+    - rid: 8754088699014676595
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 13
+        Description:
+          Identifier: tilt_intensity
+          Label: tilt_intensity
+          GuiGroup: Tilt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676596
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 14
+        Description:
+          Identifier: tilt_offset
+          Label: tilt_offset
+          GuiGroup: Tilt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 8754088699014676597
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 15
+        Description:
+          Identifier: stone_tilt
+          Label: StoneTilt
+          GuiGroup: Tilt
+          GuiDescription: 
+          Type: 4
+          WidgetType: 6
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 2
+          EnumValues:
+          - Value: 1
+            Label: Tilt Off
+          - Value: 2
+            Label: Tilt On
+    - rid: 8754088699014676598
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 16
+        Description:
+          Identifier: round_intensity
+          Label: round_intensity
+          GuiGroup: 
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 10
+        NumericalDescription:
+          DefaultValue: 10
+          MinValue: 0
+          MaxValue: 100
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
