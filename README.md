@@ -6,7 +6,7 @@
 
 ## スクリーンショット
 
-(./docs/UnityRuntime.jpg)
+![スクリーンショット](./docs/UnityRuntime.jpg)
 
 ---
 
