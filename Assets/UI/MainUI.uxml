@@ -10,25 +10,28 @@
         <ui:VisualElement name="control-panel" class="control-panel">
 
             <ui:VisualElement class="control-block">
-                <ui:Label text="Wear Level" class="control-label" />
-                <ui:Slider low-value="0" high-value="1" value="0.3" name="slider-wear" class="control-slider" />
+                <ui:Label text="Random Seed" class="control-label" />
+                <ui:Button low-value="0" name="buttun-random" text="Randomize" />
             </ui:VisualElement>
 
             <ui:VisualElement class="control-block">
-                <ui:Label text="Rust Amount" class="control-label" />
-                <ui:Slider low-value="0" high-value="1" value="0.5" name="slider-rust" class="control-slider" />
+                <ui:Label text="Displacement Strength" class="control-label" />
+                <ui:Slider low-value="-1" high-value="1" value="0.6" name="slider-displacement" class="control-slider" />
             </ui:VisualElement>
 
             <ui:VisualElement class="control-block">
-                <ui:Label text="Stripe Count (X Amount)" class="control-label" />
-                <ui:SliderInt low-value="1" high-value="10" value="4" name="slider-stripe" class="control-slider" />
+                <ui:Label text="Roughness Intensity" class="control-label" />
+                <ui:Slider low-value="0" high-value="1" value="1" name="slider-roughness" class="control-slider" />
             </ui:VisualElement>
 
             <ui:VisualElement class="control-block">
-                <ui:Label text="Paint Color" class="control-label" />
-                <ui:Slider low-value="0" high-value="1" value="1" name="slider-color-r" class="control-slider" />
-                <ui:Slider low-value="0" high-value="1" value="1" name="slider-color-g" class="control-slider" />
-                <ui:Slider low-value="0" high-value="1" value="1" name="slider-color-b" class="control-slider" />
+                <ui:Label text="Normal Intensity" class="control-label" />
+                <ui:Slider low-value="-1" high-value="1" value="0" name="slider-normal" class="control-slider" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="control-block">
+                <ui:Label text="Stone Mask" class="control-label" />
+                <ui:Slider low-value="0" high-value="1" value="0" name="slider-mask" class="control-slider" />
             </ui:VisualElement>
 
         </ui:VisualElement>
