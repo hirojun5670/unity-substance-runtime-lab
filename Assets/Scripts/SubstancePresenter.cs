@@ -1,5 +1,6 @@
 
 using System;
+using System.Diagnostics;
 using R3;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
@@ -21,9 +22,43 @@ public class SubstancePresenter : IStartable, IDisposable
   }
   public void Start()
   {
-    substanceUIDocument.StripeChanged
+    substanceUIDocument.RandomButtonClicked
       .ThrottleLast(TimeSpan.FromMilliseconds(100))
-      .Subscribe(value => substanceMaterialControler.SetMaterialState(value))
+      .Subscribe(value =>
+      {
+        substanceMaterialControler.SetRandomSeed();
+      })
+      .AddTo(disposables);
+
+    substanceUIDocument.DisplacementChanged
+      .Subscribe(value =>
+      {
+        substanceMaterialControler.SetDisplacement(value);
+      })
+      .AddTo(disposables);
+
+    substanceUIDocument.RoughnessChanged
+      .ThrottleLast(TimeSpan.FromMilliseconds(100))
+      .Subscribe(value =>
+      {
+        substanceMaterialControler.SetRoughness(value);
+      })
+      .AddTo(disposables);
+
+    substanceUIDocument.NormalChanged
+      .ThrottleLast(TimeSpan.FromMilliseconds(100))
+      .Subscribe(value =>
+      {
+        substanceMaterialControler.SetNormal(value);
+      })
+      .AddTo(disposables);
+
+    substanceUIDocument.MaskChanged
+      .ThrottleLast(TimeSpan.FromMilliseconds(100))
+      .Subscribe(value =>
+      {
+        substanceMaterialControler.SetMask(value);
+      })
       .AddTo(disposables);
   }
 
